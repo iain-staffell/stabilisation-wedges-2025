@@ -141,7 +141,7 @@ First, run `/Fig 4/Figure 4 Part 1.r` which reads the AR6 database, an extracts 
 
 Second, run `/Fig 4/Figure 4 Part 2.r` which reads in these interim files, calculates the difference in effort between the two scenarios using Monte Carlo, and then translates these into units of wedges.  
 
-This second part uses `/Fig 4/AR6_targets.csv` to normalise 'effort' (i.e. TWh, MtCO₂) into wedges.
+This second part uses `/Fig 4/AR6_targets.csv` to normalise 'effort' (i.e. TWh, MtCO₂) into wedges. These targets are derived from those reported in `/Fig 3/Figure 3 Main workbook.xlsx`. Unit conversions and adjustments applied to targets (to make them compatible with values from the AR6 database) are specified in the 'Translating IAM results into wedges" section of the supplementary material. 
 
 
 
