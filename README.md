@@ -1,176 +1,191 @@
-# Stablisiation wedges 2025 - Replication package
-This package contains the code and data needed to replicate the results from Johnson & Staffell, *"Democratising climate change mitigation pathways using modernised Stabilisation Wedges"*
+# Stabilisation wedges 2025 - Replication package
+This package contains the code and data needed to replicate the results from Johnson & Staffell, *"Democratising climate change mitigation pathways using modernised Stabilisation Wedges"*.
 
-Pre-requisites:  [R](https://www.r-project.org/) and [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel).
+Citation: ... *(DOI to be added when known)* ...
 
-R requires the following packages: `mgcv`, `reshape2`, `dplyr` and `tidyverse`.
+Contact: [Iain Staffell](mailto:i.staffell@imperial.ac.uk?subject=Stabilisation%20Wedges%20Github) and [Nathan Johnson](mailto:nathan.johnson17@imperial.ac.uk?subject=Stabilisation%20Wedges%20Github).
+
+Licence: MIT
+
+
+
+<br><br>
+
+## Pre-requisites
+* [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) for viewing the main results
+* [R 4.4](https://www.r-project.org/) and [Microsoft Excel](https://www.microsoft.com/en-us/microsoft-365/excel) for replicating the main analysis
+* [GDAL 3.7](https://gdal.org/en/stable/) and [R 4.4](https://www.r-project.org/) for replicating the supplementary analysis
+
+R requires the following packages: `mgcv`, `reshape2`, `terra`, `dplyr` and `tidyverse`.
 
 To ensure these are installed, you could run:
 ```
-if (!require(mgcv)) { install.packages('mgcv'); require(mgcv) }
-if (!require(reshape2)) { install.packages('reshape2'); require(reshape2) }
-if (!require(dplyr)) { install.packages('dplyr'); require(dplyr) }
-if (!require(tidyverse)) { install.packages('tidyverse'); require(tidyverse) }
+if (!require(mgcv))      install.packages('mgcv')
+if (!require(reshape2))  install.packages('reshape2')
+if (!require(terra))     install.packages('terra')
+if (!require(dplyr))     install.packages('dplyr')
+if (!require(tidyverse)) install.packages('tidyverse')
 ```
 
 <br>
 <br>
 
 
+## Main data
 
-# A Wedge Approach to Mitigation
+`Main Data - Figures 1 to 4.xlsx` gives the data presented in the four figures of the main paper.  Data are given in tabular form, so they can be read by Python, R, and other languages easily.
 
-The first section of the paper provides some general context on global GHG emissions and their breakdown between sectors.
+The **Meta** sheet gives definitions of all columns in the other worksheets.
 
-## Figure 1
+The **Fig1** sheet gives the stylised pathways for future emissions with different numbers of wedges and their resulting temperature rise, as shown in Figure 1.  The temperature ranges that are related to different levels of mitigation are derived from the IAMC AR6 database, described in the section on Figure S2.
 
-`/Fig 1/Figure 1.xlsx` gives the historical GHG emissions and stylised pathways for future emissions with different numbers of wedges.  The main figure is assembled in `Sheet 1`, and the calculation of emissions in 2050 is given in `Sheet 2`.
+The **Fig2Fig3** sheet gives the definitions of how much effort is needed to achieve a 'wedge' of mitigation from each of our 36 strategies, both in relative shares (as shown in Figure 2) and absolute units (as shown in Figure 3).  The code for calculating effort are described in the section on [Options That Can Achieve a Wedge](#options-that-can-achieve-a-wedge).
 
-The temperature ranges that are related to different levels of mitigation are derived from the IAMC AR6 database, described later in the sub-section on Figure S2.
-
-
-
-## Figure 2
-
-`/Fig 2/Figure 2.xlsx` gives the sectoral breakdown historical emissions (in 2019) from IPCC (2022) AR6 WG3 and projected emissions in 2050 under each baseline scenario: IEA 6DS, RCP 8.5, IEA 4DS, RCP 6.0.
+The **Fig4** sheet gives the translation of mitigation pathways from the IAMC AR6 database into units of wedges, as shown in Figure 4.  The code for calculating these results are describe in the section on [IAM Results in the Language of Wedges](#iam-results-in-the-language-of-wedges)
 
 <br>
 <br>
 
 
-# Options That Can Achieve a Wedge
+## Options That Can Achieve a Wedge
 
-The second section of the paper quantifies 36 options that can acheive a 'wedge' of mitigation.
+The code and spreadsheets in the `effort_calc/` sub-folder calculate the scale at which each strategy must be deployed to achieve one wedge.  All results are collated in the Fig2Fig3 sheet of `Main Data - Figures 1 to 4.xlsx`.  
 
-## Figure 3
-
-The code and spreadsheets in the `/Fig 3/` sub-folder calculate the scale at which each strategy must be deployed to achieve one wedge.  All results are collated in `/Fig 3/Figure 3 Main workbook.xlsx`.  This takes in data from other files to compile sector specific results.
+Data inputs to these scripts are contained in `effort_calc/inputs/`
 
 
-### Electricity sector
+#### Electricity sector
 
-Absolute values are calculated in `/Fig 3/Power.r`.  Running the code prints out summaries for each wedge.  Results from the following data frames are then compiled in `/Fig 3/Figure 3 Main workbook.xlsx`:
-
-- **RES and nuclear wedges:** `wedge_res`
-- **Coal-to-gas fuel switching:** `wedge_c2g`
-- **Coal power with CCS:** `wedge_CCS_coal`
-- **Gas power with CCS:** `wedge_CCS_gas`
-- **Bioenergy power with CCS:** `wedge_BECCS`
-- **Direct air capture:** `wedge_DAC`
-
-
-### Transport sector
-
-Absolute values are calculated in `/Fig 3/Transport.r`.  Running the code prints out summaries for each wedge.  Results from the following data frames are then compiled in `/Fig 3/Figure 3 Main workbook.xlsx`:
-
-- **Vehicle efficiency:** `wedge_v_eff`
-- **Avoided or active travel:** `wedge_avoid`
-- **Electric vehicles:** `wedge_EVs`
-- **Public transport:** `wedge_public`
-- **Avoided air travel:** `wedge_air`
-- **Biofuels:** `wedge_bio`
-- **Freight decarbonisation:** `wedge_freight`
+Absolute values are calculated in `effort_calc/Power.r`.  Running the code calculates the effort required for six strategies, stored in the following variables:
+- RES and nuclear wedges: `wedge_res`
+- Coal-to-gas fuel switching: `wedge_c2g`
+- Coal power with CCS: `wedge_CCS_coal`
+- Gas power with CCS: `wedge_CCS_gas`
+- Bioenergy power with CCS: `wedge_BECCS`
+- Direct air capture: `wedge_DAC`
 
 
-### Buildings sector
+#### Transport sector
 
-Absolute values are calculated in `/Fig 3/Buildings.r`.  Running the code prints out summaries for each wedge.  Results from the following data frames are then compiled in `/Fig 3/Figure 3 Main workbook.xlsx`:
+Absolute values are calculated in `effort_calc/Transport.r`.  Running the code calculates the effort required for seven strategies, stored in the following variables:
 
-- **Building heat transfer:** `wedge_fabric`
-- **Heat pumps:** `wedge_hp`  
-- **Clean cookstoves:** `wedge_stoves`  
+- Vehicle efficiency: `wedge_v_eff`
+- Avoided or active travel: `wedge_avoid`
+- Electric vehicles: `wedge_EVs`
+- Public transport: `wedge_public`
+- Avoided air travel: `wedge_air`
+- Biofuels: `wedge_bio`
+- Freight decarbonisation: `wedge_freight`
 
-### Land use and food production:
 
-Absolute values are calculated in `/Fig 3/Buildings.r`.  Running the code prints out summaries for each wedge.  Results from the following data frames are then compiled in `/Fig 3/Figure 3 Main workbook.xlsx`:
+#### Buildings sector
 
-- **Reduced deforestation:** `wedge_def`
-- **Temperate reforestation:** `wedge_temp`
-- **Tropical reforestation:** `wedge_trop`
-- **Trees in tropical cropland:** `wedge_trop_incrop`
-- **Trees in temperate cropland:** `wedge_temp_incrop`
-- **Trees in tropical pastures:** `wedge_trop_silvo`
-- **Trees in temperate pastures:** `wedge_temp_silvo`
-- **Rewetting peatlands (half-wedge):** `h_wedge_rewet`
-- **Preventing peatland drainage (half-wedge):** `h_wedge_drain`
+Absolute values are calculated in `effort_calc/Buildings.r`.  Running the code calculates the effort required for three strategies, stored in the following variables:
+
+- Building heat transfer: `wedge_fabric`
+- Heat pumps: `wedge_hp`  
+- Clean cookstoves: `wedge_stoves`  
+
+#### Land use and food production:
+
+Absolute values are calculated in `effort_calc/Land.r`.  Running the code calculates the effort required for nine strategies, stored in the following variables:
+
+- Reduced deforestation: `wedge_def`
+- Temperate reforestation: `wedge_temp`
+- Tropical reforestation: `wedge_trop`
+- Trees in tropical cropland: `wedge_trop_incrop`
+- Trees in temperate cropland: `wedge_temp_incrop`
+- Trees in tropical pastures: `wedge_trop_silvo`
+- Trees in temperate pastures: `wedge_temp_silvo`
+- Rewetting peatlands (half-wedge): `h_wedge_rewet`
+- Preventing peatland drainage (half-wedge): `h_wedge_drain`
 
 <br>
-The remaining land and food wedges are calculated in separate spreadsheets and then compiled in `/Fig 3/Figure 3 Main workbook.xlsx`.  
+The remaining land and food wedges are calculated in separate spreadsheets:
 
-- **Soil carbon sequestration:** Calculated in `Soil carbon sequestration.xlsx` and cells P43:R43 (highlighted in pink) show the area of cropland required in 2050 for a wedge.
+- Soil carbon sequestration: Calculated in `effort_calc/Soil carbon sequestration.xlsx`.  Cells P43:R43 (highlighted in pink) show the area of cropland required in 2050 for a wedge.
 
-- **Enhanced weathering:** Calculated in `Enhanced weathering.xlsx` and cell D18 (highlighted in pink) shows the area of cropland required in 2050 for a wedge.
+- Enhanced weathering: Calculated in `effort_calc/Enhanced weathering.xlsx`.  Cell D18 (highlighted in pink) shows the area of cropland required in 2050 for a wedge.
 
-- **Reduced meat consumption:** Calculated in `Dietary change.xlsb` on the `Scenarios 2050` worksheet. Cells Y2:Y3 to AB2:AB13 which are highlighted in pink, show the reduction in calories from meat in 2050 required for a wedge.
+- Reduced meat consumption: Calculated in `effort_calc/Dietary change.xlsb` on the `Scenarios 2050` worksheet.  Cells Y2:Y3 to AB2:AB13 (highlighted in pink), show the reduction in calories from meat in 2050 required for a wedge.
 
-- **Avoid food loss and waste:** Calculated in `Food loss and waste.xlsb` on the  `Model PivotTables` sheet. Select the value “2050 baseline” in cell B1. Cells G3:G7 to I3:I7 which are highlighted in pink, show the reduction in the mass of food loss and waste required for a wedge.
-
-
-### Industry sector
-
-Absolute values are calculated in `Industry.xlsx` which are compiled in `/Fig 3/Figure 3 Main workbook.xlsx`.
-
-- **Produce clean hydrogen:** Calculated in the `Clean hydrogen` worksheet. The mass of hydrogen required to acheive a wedge is given in cells E28:H28 (highlighted in pink). 
-
-- **Decarbonising steel:** Calculated in the `Steel and cement` worksheet as the average effort across steel produced with CCS and steel produced via hydrogen-DRI. The amount of steel that must be produced with CCS and via hydrogen DRI to achieve a wedge are given in cells E33:H33 and and E37:H37 respecively (all highlighted in pink). 
-
-- **CCS at cement plants:** Calculated in the `Steel and cement` worksheet. The amount of cement that must be produced with CCS to achieve a wedge is given in E24:H24 (highlighted in pink).
-
-- **Methane in oil and gas:** Calculated in the `Methane in oil and gas` worksheet. The cumulative methane emissions are used to calculate the effort required for a wedge, and are given in cells AI50:AL50 (highlighted in pink).
+- Avoid food loss and waste: Calculated in `effort_calc/Food loss and waste.xlsb` on the `Model PivotTables` sheet.  With the value "2050 baseline" selected in cell B1, cells G3:G7 to I3:I7 (highlighted in pink) show the reduction in the mass of food loss and waste required for a wedge.
 
 <br>
-<br>
 
-# IAM Results in the Language of Wedges
-
-The third section of the paper takes mitigation pathways from the IAMC AR6 database and translates these into units of wedges.
-
-The code for this section requires a copy of the AR6 database to be downloaded and pre-processed.  Redistribution of the database is not permitted by IIASA, so we instead provide instructions on how to recreate the necessary input files.
-
-First, download the the [AR6 Scenarios Database](https://data.ece.iiasa.ac.at/ar6/#/downloads).  From that link, press the `Guest login` button, then select `Downloads` from the top menu, and finally scroll down to the link for `AR6_Scenarios_Database_World_ALL_CLIMATE_v1.1`.
-
-Extract the ZIP file to the root folder (where this `readme.md` file exists).  Then in `ar6_library.r` run the `PREREQUISITE` code block starting on line 25.  This will generate a minimally-processed version of the AR6 databse, where emissions in 2050 and warming in 2100 are appended to each result, to allow for faster searching and filtering.  After running this code block successfully, you will have a 750 MB file .rds file (R's internal binary format, for faster reading), with MD5 checksum of `4a922b73c0ac53be693b8f975edf7ff2`.
-
-The subsequent scripts in this section then call `ar6_library.r` which will load this .rds file and correct some obvious errors in it (e.g. population being reported as 10 trillion rather than 10 billion, or CH₄ emissions being 200 Gt rather than 200 Mt).
+For the six 'add trees' strategies, the relative share of available land area is computed using GDAL and R, as described in [Contextualising global land use areas](#contextualising-global-land-use-areas)
 
 
+#### Industry sector
 
-## Figure 4
+Absolute values are calculated in `effort_calc/Industry.xlsx`.
 
-First, run `/Fig 4/Figure 4 Part 1.r` which reads the AR6 database, an extracts values for variables representing our wedge strategies under 'current policy' and 'decarbonisation' scenarios.  This saves a set of interim files and graphs in `/Fig 4/iamc_data/`.
+- Produce clean hydrogen: Calculated in the `Clean hydrogen` worksheet. The mass of hydrogen required to achieve a wedge is given in cells E28:H28 (highlighted in pink). 
 
-Second, run `/Fig 4/Figure 4 Part 2.r` which reads in these interim files, calculates the difference in effort between the two scenarios using Monte Carlo, and then translates these into units of wedges.  
+- Decarbonising steel: Calculated in the `Steel and cement` worksheet as the average effort across steel produced with CCS and steel produced via hydrogen-DRI. The amount of steel that must be produced with CCS and via hydrogen DRI to achieve a wedge are given in cells E33:H33 and and E37:H37 respectively (all highlighted in pink). 
 
-This second part uses `/Fig 4/AR6_targets.csv` to normalise 'effort' (i.e. TWh, MtCO₂) into wedges. These targets are derived from those reported in `/Fig 3/Figure 3 Main workbook.xlsx`. Unit conversions and adjustments applied to targets (to make them compatible with values from the AR6 database) are specified in the 'Translating IAM results into wedges" section of the supplementary material. 
+- CCS at cement plants: Calculated in the `Steel and cement` worksheet. The amount of cement that must be produced with CCS to achieve a wedge is given in E24:H24 (highlighted in pink).
 
-
-
-## Figure S2
-
-The code in the `/Fig S2/` sub-folder reads the IAMC AR6 database, and generates a relationship between emissions from 2020 to 2050 and temperature in 2100.  This relationship is also used in Figure 1.
-
-
-
-## Figure S5
-
-The code in the `/Fig S5/` sub-folder reads the IAMC AR6 database, extracts scenarios matching our definitions, and summarises the emissions and temperature time series.
-
-
-
-## Figures S6–S10
-
-To generate these figures, run `/Fig 4/Figure 4 Part 1.r` and they will be produced in the `/Fig 4/iamc_data/` subfolder.
+- Methane in oil and gas: Calculated in the `Methane in oil and gas` worksheet. The cumulative methane emissions are used to calculate the effort required for a wedge, and are given in cells AI50:AL50 (highlighted in pink).
 
 <br>
 <br>
 
-# Other files
 
-`ar6_library.r` – Code to process and work with the IAMC AR6 database.
+## IAM Results in the Language of Wedges
 
-`blam_library.r` – Background data handling functions.
+#### Initial setup
+Our analysis of mitigation effort in IAMs requires a copy of the AR6 database to be downloaded and pre-processed. 
+ 
+1. Download the the [AR6 Scenarios Database](https://data.ece.iiasa.ac.at/ar6/#/downloads).  From that link, press the *Guest login* button,  select *Downloads* from the top menu, and finally scroll down to the link for *'AR6_Scenarios_Database_World_ALL_CLIMATE_v1.1'*.
+2. Extract the zip file to give the csv database and xlsx metadata.
+3. Run `iams_calc/ar6_first_run.r`, following the instructions to set the paths where you saved the files in step 2  
 
-`/Fig 3/Inputs/` – Data sets from the literature to specify individual wedges (detailed in the Figure 3 code files).
+These three steps will generate a minimally-processed version of the AR6 database, featuring only the 1,202 vetted scenarios, with emissions in 2050 and warming in 2100 appended to each result to allow for faster searching and filtering.  After running this code block successfully, you will have a 533 MB file in R's binary format, with MD5 checksum of `266f7c8348ea821b3077ed1e9b9305e4`.
 
-`/Fig 4/iamc_data/` – A folder to store the interim results and figures from the Figure 4 code.
+<br>
 
+#### Paired scenarios
+
+`iams_calc/AR6_Paired_Scenarios.csv` ← Gives the 959 pairs of 'baseline' and 'decarbonisation' scenarios from the AR6 database that we grouped together.  These pairs use the same model family and experiment family, but have different emissions budgets.  The data file gives the identifier for each scenario along with metadata on their GHG emissions in 2050.
+
+
+#### Figure 4
+
+All the code needed to produce the translation from IAM outputs into wedges is given in `iams_calc/iams_to_wedges.r`.  This includes blocks of code to reproduce Figure S6, Figure S7, Figure 4, and Figures S8 to S29.  
+
+The final output from running this code is provided in `iams_calc/wedge_iam_results.csv` to verify results you produce, or to save you having to set up that code. These results are then reshaped (wide to long), given nicer column names, and presented in the Fig4 sheet of `Main Data - Figures 1 to 4.xlsx`.
+
+<br>
+<br>
+
+
+## Other supporting analysis
+
+#### Contextualising global land use areas
+
+The analysis of land usage within the temperate and tropical biomes relies on external data from ESA, NASA and Beck et al.  Download instructions are included within the first file below.
+
+We first use GDAL to align all three datasets onto a common grid, then use R to combine land usage and biomes, compute areas, and draw maps.
+
+- `others/global_land_area_1.bat` ← Code to pre-process GIS data from ESA-CCI, NASA MODIS and Beck's Koppen-Geiger projections.
+
+- `others/global_land_area_2.r` ← Code to analyse the ESA-CCI data, generating the results in Table S22-S23 and Figure S31-S32.
+
+- `others/global_land_area_3.r` ← Code to analyse the NASA MODIS data, generating the results in Table S22-S23 and Figure S31-S32.
+
+<br>
+
+
+#### 6 trillion ways to decarbonise
+
+- `others/wedge_combinations.py` ← Calculates the total number of combinations for deploying strategies to achieve 20 wedges, shown in Table S4.
+
+<br>
+
+
+#### Helper functions
+
+- `others/ar6_library.r` ← A helper file which is called by other scripts.  It loads the AR6 database produced in the initial setup stage, removes some obvious errors from it (e.g. scenarios where people eat 5,000 calories of meat per day), and defines several background functions.
+
+- `others/blam_library.r` ← Background data handling functions

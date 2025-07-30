@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite it using the metadata below."
+title: "Democratising climate change mitigation pathways using modernised Stabilisation Wedges"
+version: "1.1.0"
+doi: "xx.xxxx/xxxxxx"       # replace when DOI is assigned
+date-released: "2025-07-30"
+authors:
+  - family-names: Johnson
+    given-names: Nathan
+    email: nathan.johnson17@imperial.ac.uk
+    orcid: "https://orcid.org/0000-0002-9521-4700"
+  - family-names: Staffell
+    given-names: Iain
+    email: i.staffell@imperial.ac.uk
+    orcid: "https://orcid.org/0000-0003-1012-7075"
+repository-code: "https://github.com/iain-staffell/stabilisation-wedges-2025"
+license: "MIT"
+url: "https://doi.org/xx.xxxx/xxxxxx"       # replace when DOI is assigned
