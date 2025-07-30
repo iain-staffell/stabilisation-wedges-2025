@@ -1,0 +1,373 @@
+"Reference.Article","year","location","scale","species","iLUC.type","dLUC.type","Inclusion_iLUC","Grassland","Forest","Palm","energy.type","generation","allocation","GHG.emissions.of.bioenergy","min.fossil","max.fossil","C.amortizing.period.yrs"
+"Acquaye AA et al 2012",2012,"UK","country","soybean",,,1,,,0,"biodiesel","1G",,54.1,84,94,20
+"Acquaye AA et al 2012",2012,"UK","country","rapessed",,,1,,,0,"biodiesel","1G",,91.5,84,94,20
+"Acquaye AA et al 2012",2012,"UK","country","palm oil",,,1,,,1,"biodiesel","1G",,58,84,94,20
+"Acquaye AA et al 2012",2012,"UK","country","sugarcane",,,1,,,0,"bioethanol","1G",,43.1,84,94,20
+"Acquaye AA et al 2012",2012,"UK","country","sugar beet",,,1,,,0,"bioethanol","1G",,33.5,84,94,20
+"Acquaye AA et al 2012",2012,"UK","country","corn",,,1,,,0,"bioethanol","1G",,92.9,84,94,20
+"Cherubini F & Ulgiati S 2010",2010,"austria","country","corn stover","no iLUC",,0,,,0,"bioethanol","2G",,137,84,94,20
+"Cherubini F & Ulgiati S 2010",2010,"austria","country","wheat straw","no iLUC",,0,,,0,"bioethanol","2G",,130,84,94,20
+"Cocco D et al 2014",2014,"Italy","region","rapeseed",,"Cropland (wheat)",0,0,0,0,"biodiesel","1G","energy",34.45,84,94,100
+"Cocco D et al 2014",2014,"Italy","region","ethiopian mustard",,"Cropland (wheat)",0,0,0,0,"biodiesel","1G","energy",38.21,84,94,100
+"Cocco D et al 2014",2014,"Italy","region","cardoon",,"Cropland (wheat)",0,0,0,0,"biodiesel","1G","energy",24.54,84,94,100
+"de Souza SP et al 2010",2010,"Brazil","country","palm oil",,"natural forest",1,,1,1,"biodiesel","1G","mass",18.06,84,94,39
+"Debolt S et al 2009",2009,"USA","Region","Switchgrass and big bluestem and easters gamgrass",,"abanded mine land and abanded agricultural land",0,0,0,0,"bioethanol","2G",,25,84,94,10
+"Egeskog A et al 2014",2014,"Brazil","region","sugarcane","no iLUC","grassland and arawheatland",0,1,0,0,"bioethanol","1G",,24,84,94,20
+"Ericsson N et al 2013",2013,"sweden","country","willow",,"fallow",0,0,0,0,"biogas",,,-6.01,100,200,25
+"Falano T et al 2014",2014,"UK","country","straw wheat",,,0,,,0,"bioethanol","2G","system expansion",0.88,84,94,20
+"Falano T et al 2014",2014,"UK","country","straw wheat",,,0,,,0,"bioethanol","2G","economic",23.44,84,94,20
+"Falano T et al 2014",2014,"UK","country","forest residues",,,0,,,0,"bioethanol","2G","system expansion",-9.16,84,94,20
+"Falano T et al 2014",2014,"UK","country","forest residues",,,0,,,0,"bioethanol","2G","economic",11.25,84,94,20
+"Falano T et al 2014",2014,"UK","country","poplar",,,0,,,0,"bioethanol","2G","system expansion",-11.76,84,94,20
+"Falano T et al 2014",2014,"UK","country","poplar",,,0,,,0,"bioethanol","2G","system expansion",-11.77,84,94,20
+"Falano T et al 2014",2014,"UK","country","poplar",,,0,,,0,"bioethanol","2G","economic",14.04,84,94,20
+"Falano T et al 2014",2014,"UK","country","miscanthus",,,0,,,0,"bioethanol","2G","system expansion",-6.46,84,94,20
+"Falano T et al 2014",2014,"UK","country","miscanthus",,,0,,,0,"bioethanol","2G","system expansion",-6.47,84,94,20
+"Falano T et al 2014",2014,"UK","country","miscanthus",,,0,,,0,"bioethanol","2G","economic",15.39,84,94,20
+"Gabrielle B et al  2014",2014,"France","region","rapeseed",,,1,,,0,"biodiesel","1G","system expansion",86,84,94,20
+"Gabrielle B et al  2014",2014,"France","region","rapeseed",,,1,,,0,"biodiesel","1G","system expansion",85,84,94,20
+"Gabrielle B et al  2014",2014,"France","region","wheat",,,1,,,0,"bioethanol","1G","system expansion",82,84,94,20
+"Gabrielle B et al  2014",2014,"France","region","wheat",,,1,,,0,"bioethanol","1G","system expansion",76,84,94,20
+"Gabrielle B et al  2014",2014,"France","region","miscanthus",,"fallow",1,0,0,0,"bioethanol","2G","system expansion",46,84,94,20
+"Gabrielle B et al  2014",2014,"France","region","miscanthus",,"fallow",1,0,0,0,"bioethanol","2G","system expansion",42,84,94,20
+"Gabrielle B et al  2014",2014,"France","region","miscanthus",,"crop land",1,0,0,0,"bioethanol","2G","system expansion",18,84,94,20
+"Gabrielle B et al  2014",2014,"France","region","sugar beet",,,1,,,0,"bioethanol","1G","system expansion",11,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"tropical rain forest",0,0,0,0,"bioethanol","1G","energy",222,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"tropical rain forest",0,0,1,0,"bioethanol","1G","energy",218,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"grassland",0,0,1,0,"bioethanol","1G","energy",150,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"grassland",0,1,0,0,"bioethanol","1G","energy",150,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"tropical dry forest",0,1,0,0,"bioethanol","1G","energy",140,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"tropical dry forest",0,0,1,0,"bioethanol","1G","energy",140,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"tropical rain forest",0,0,1,0,"bioethanol","1G","energy",132.46,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"tropical rain forest moist",0,0,1,0,"bioethanol","1G","energy",132.46,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"tropical rain forest moist",0,0,1,0,"bioethanol","1G","energy",123.13,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"grassland",0,1,1,0,"bioethanol","1G","energy",72.76,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"grassland",0,1,0,0,"bioethanol","1G","energy",72.76,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"grassland",0,1,0,0,"bioethanol","1G","energy",70.89,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"tropical dry forest",0,0,1,0,"bioethanol","1G","energy",67.16,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"tropical dry forest",0,0,1,0,"bioethanol","1G","energy",65.26,84,94,20
+"Garcia CA et al 2011",2011,"mexico","region","sugarcane",,"tropical dry forest",0,0,1,0,"bioethanol","1G","energy",63.43,84,94,20
+"Garcia CA & Manzini F 2012",2012,"mexico","country","sugarcane",,"grass land",0,1,0,0,"bioethanol","1G","mass",57.5,84,94,20
+"gelfand I et al 2013",2013,"USA","region","conventional corn soybean wheat",,"marginal land",0,0,0,0,"bioethanol","1G","energy",8.46,84,94,22
+"gelfand I et al 2013",2013,"USA","region","No till corn soybean wheat",,"marginal land",0,0,0,0,"bioethanol","1G","energy",2.9,84,94,22
+"gelfand I et al 2013",2013,"USA","region","Alfalfa",,"marginal land",0,0,0,0,"bioethanol","2G","energy",-10.34,84,94,22
+"gelfand I et al 2013",2013,"USA","region","Poplar",,"marginal land",0,0,0,0,"bioethanol","2G","energy",-11.28,84,94,22
+"gelfand I et al 2013",2013,"USA","region","succional herbous vegetation",,"marginal land",0,0,0,0,"bioethanol","2G","energy",-13.16,84,94,22
+"gelfand I et al 2013",2013,"USA","region","fertilised succional herbous vegetation",,"marginal land",0,0,0,0,"bioethanol","2G","energy",-4.7,84,94,22
+"Hamelin L et al 2014",2014,"Danmark","country","perrenial crops",,"maize animal feed",1,0,0,0,"biogas",,,0.75,100,200,20
+"Hansen A et al 2013",2013,"germany","country","poplar",,"cropland",0,0,0,0,"bioelectricity",,"economic",236,200,500,20
+"Hassan MNA et al 2011",2011,"thailand","country","palm oil","no iLUC","primary forest",0,0,1,1,"biodiesel","1G",,378,84,94,25
+"Hassan MNA et al 2011",2011,"thailand","country","palm oil","no iLUC","primary forest with replacement",0,0,1,1,"biodiesel","1G",,241,84,94,25
+"Hassan MNA et al 2011",2011,"thailand","country","palm oil","no iLUC","secondary forest",0,0,1,1,"biodiesel","1G",,141,84,94,25
+"Hassan MNA et al 2011",2011,"thailand","country","palm oil","no iLUC","secondary forest with replacement",0,0,1,1,"biodiesel","1G",,5,84,94,25
+"Hassan MNA et al 2011",2011,"thailand","country","palm oil","no iLUC","grasslang",0,0,1,1,"biodiesel","1G",,39.96,84,94,25
+"Hassan MNA et al 2011",2011,"thailand","country","palm oil","no iLUC","degraded land",0,1,0,1,"biodiesel","1G",,-52.5,84,94,25
+"Iriarte A et al 2012",2012,"chile","country","rapessed","no iLUC","grassland",0,1,,0,"bioethanol","1G","energy",114.44,84,94,20
+"Iriarte A et al 2012",2012,"chile","country","rapessed","no iLUC","grassland",0,1,0,0,"bioethanol","1G","energy",112.3,84,94,20
+"Iriarte A & Villalobos P 2013",2013,"chile","country","sunflower","no iLUC",,0,,,0,"biodiesel","1G",,0.62,84,94,20
+"Kami Delivand M & Gnznsounou E 2013",2013,"brazil","region","palm oil",,"grassland",0,1,0,1,"biodiesel","1G","energy",9.03,84,94,25
+"Kami Delivand M & Gnznsounou E 2013",2013,"brazil","region","palm oil",,"grassland",0,1,0,1,"biodiesel","1G","energy",22.5,84,94,25
+"Kami Delivand M & Gnznsounou E 2013",2013,"brazil","region","palm oil entire grain",,"grassland",0,1,0,1,"bioelectricity",,"energy",8.57,200,500,25
+"Kauffman N et al 2014",2014,"USA","country","corn",,,1,,,0,"bioethanol","1G",,87.6,84,94,30
+"Kauffman N et al 2014",2014,"USA","country","corn",,,1,,,0,"bioethanol","1G",,60.55,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","soybean",,,1,,,0,"biodiesel","1G","energetic",33.82,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","soybean",,,1,,,0,"biodiesel","1G","economic",22.6,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","soybean",,,1,,,0,"biodiesel","1G","displacement",16.46,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","spring camelina",,,1,,,0,"biodiesel","1G","energetic",40.35,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","spring camelina",,,1,,,0,"biodiesel","1G","economic",30.38,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","spring camelina",,,1,,,0,"biodiesel","1G","displacement",25.48,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","drayland camelina",,,1,,,0,"biodiesel","1G","energetic",51.83,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","drayland camelina",,,1,,,0,"biodiesel","1G","economic",40.63,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","drayland camelina",,,1,,,0,"biodiesel","1G","displacement",43.24,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","winter camelina",,,1,,,0,"biodiesel","1G","energetic",59.61,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","winter camelina",,,1,,,0,"biodiesel","1G","economic",45.93,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","winter camelina",,,1,,,0,"biodiesel","1G","displacement",54.72,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","short season camelina",,,1,,,0,"biodiesel","1G","energetic",39.86,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","short season camelina",,,1,,,0,"biodiesel","1G","economic",26.19,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","short season camelina",,,1,,,0,"biodiesel","1G","displacement",27.54,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","douwheatcropping system",,,1,,,0,"biodiesel","1G","energetic",50.16,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","douwheatcropping system",,,1,,,0,"biodiesel","1G","economic",36.44,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","douwheatcropping system",,,1,,,0,"biodiesel","1G","displacement",44.02,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","future camelina",,,1,,,0,"biodiesel","1G","energetic",42.91,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","future camelina",,,1,,,0,"biodiesel","1G","economic",32.97,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","future camelina",,,1,,,0,"biodiesel","1G","displacement",28.07,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","canola biodiesel",,,1,,,0,"biodiesel","1G","energetic",68.16,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","canola biodiesel",,,1,,,0,"biodiesel","1G","economic",53.22,84,94,30
+"Krohn BJ & Freire F et al 2012",2012,"USA","country","canola biodiesel",,,1,,,0,"biodiesel","1G","displacement",64.59,84,94,30
+"Lange M 2011",2011,"Brazil","country","sugarcane",,"tropical rain fores",1,0,1,0,"bioethanol","1G",,272.35,84,94,20
+"Lange M 2011",2011,"Brazil","country","sugarcane",,"deciduous forest",1,0,1,0,"bioethanol","1G",,186.036,84,94,20
+"Lange M 2011",2011,"Brazil","country","sugarcane",,"shifting cultivation mature fallow",1,0,0,0,"bioethanol","1G",,263.132,84,94,20
+"Lange M 2011",2011,"Brazil","country","sugarcane",,"shifting cultivation shortened fallow",1,0,0,0,"bioethanol","1G",,33.52,84,94,20
+"Lange M 2011",2011,"Brazil","country","sugarcane",,"scrubland",1,1,0,0,"bioethanol","1G",,155.03,84,94,20
+"Lange M 2011",2011,"Brazil","country","sugarcane",,"steppe",1,1,0,0,"bioethanol","1G",,16.76,84,94,20
+"Lange M 2011",2011,"Brazil","country","sugarcane",,"grassland",1,1,0,0,"bioethanol","1G",,14.246,84,94,20
+"Lange M 2011",2011,"Brazil","country","sugarcane",,"degraded grassland",1,1,0,0,"bioethanol","1G",,-34.358,84,94,20
+"Lange M 2011",2011,"Germany","country","sugarsugar beet",,"grassland",1,1,0,0,"bioethanol","1G",,82.962,84,94,20
+"Lange M 2011",2011,"Germany","country","sugarsugar beet",,"degraded grassland",1,1,0,0,"bioethanol","1G",,15.084,84,94,20
+"Lange M 2011",2011,"Germany","country","wheat not specified",,"grassland",1,1,0,0,"bioethanol","1G",,129.89,84,94,20
+"Lange M 2011",2011,"Germany","country","wheat not specified",,"degraded grassland",1,1,0,0,"bioethanol","1G",,43.576,84,94,20
+"Lange M 2011",2011,"Germany","country","wheat CHP plant",,"grassland",1,1,0,0,"bioethanol","1G",,98.884,84,94,20
+"Lange M 2011",2011,"Germany","country","wheat CHP plant",,"degraded grassland",1,1,0,0,"bioethanol","1G",,12.57,84,94,20
+"Lange M 2011",2011,"Germany","country","corn",,"grassland",1,1,0,0,"bioethanol","1G",,120.672,84,94,20
+"Lange M 2011",2011,"Germany","country","corn",,"degraded grassland",1,1,0,0,"bioethanol","1G",,25.978,84,94,20
+"Lange M 2011",2011,"USA","country","corn",,"scrubland",1,1,0,0,"bioethanol","1G",,216.204,84,94,20
+"Lange M 2011",2011,"USA","country","corn",,"steppe",1,1,0,0,"bioethanol","1G",,123.186,84,94,20
+"Lange M 2011",2011,"USA","country","corn",,"grassland",1,1,0,0,"bioethanol","1G",,115.644,84,94,20
+"Lange M 2011",2011,"USA","country","corn",,"degraded grassland",1,1,0,0,"bioethanol","1G",,25.978,84,94,20
+"Lange M 2011",2011,"USA","country","wheat not specified",,"scrubland",1,1,0,0,"bioethanol","1G",,212.014,84,94,20
+"Lange M 2011",2011,"USA","country","wheat not specified",,"steppe",1,1,0,0,"bioethanol","1G",,131.566,84,94,20
+"Lange M 2011",2011,"USA","country","wheat not specified",,"grassland",1,1,0,0,"bioethanol","1G",,125.7,84,94,20
+"Lange M 2011",2011,"USA","country","wheat not specified",,"degraded grassland",1,1,0,0,"bioethanol","1G",,43.576,84,94,20
+"Lange M 2011",2011,"USA","country","wheat CHP plant",,"scrubland",1,1,0,0,"bioethanol","1G",,181.008,84,94,20
+"Lange M 2011",2011,"USA","country","wheat CHP plant",,"steppe",1,1,0,0,"bioethanol","1G",,100.56,84,94,20
+"Lange M 2011",2011,"USA","country","wheat CHP plant",,"grassland",1,1,0,0,"bioethanol","1G",,94.694,84,94,20
+"Lange M 2011",2011,"USA","country","wheat CHP plant",,"degraded grassland",1,1,0,0,"bioethanol","1G",,12.57,84,94,20
+"Lange M 2011",2011,"Brazil","country","soy",,"tropical rainforest",1,0,1,0,"biodiesel","1G",,666.21,84,94,20
+"Lange M 2011",2011,"Brazil","country","soy",,"deciduous forest",1,0,1,0,"biodiesel","1G",,471.794,84,94,20
+"Lange M 2011",2011,"Brazil","country","soy",,"shifting cultivation mature fallow",1,0,0,0,"biodiesel","1G",,625.148,84,94,20
+"Lange M 2011",2011,"Brazil","country","soy",,"shifting cultivation shortened fallow",1,0,0,0,"biodiesel","1G",,165.924,84,94,20
+"Lange M 2011",2011,"Brazil","country","soy",,"scrubland",1,1,0,0,"biodiesel","1G",,252.238,84,94,20
+"Lange M 2011",2011,"Brazil","country","soy",,"steppe",1,1,0,0,"biodiesel","1G",,131.566,84,94,20
+"Lange M 2011",2011,"Brazil","country","soy",,"grassland",1,1,0,0,"biodiesel","1G",,126.538,84,94,20
+"Lange M 2011",2011,"Brazil","country","soy",,"degraded grassland",1,1,0,0,"biodiesel","1G",,58.66,84,94,20
+"Lange M 2011",2011,"argentina","country","soy",,"scrubland",1,1,0,0,"biodiesel","1G",,201.958,84,94,20
+"Lange M 2011",2011,"argentina","country","soy",,"steppe",1,1,0,0,"biodiesel","1G",,90.504,84,94,20
+"Lange M 2011",2011,"argentina","country","soy",,"grassland",1,1,0,0,"biodiesel","1G",,71.23,84,94,20
+"Lange M 2011",2011,"argentina","country","soy",,"degraded grassland",1,1,0,0,"biodiesel","1G",,10.894,84,94,20
+"Lange M 2011",2011,"South east asia","country","palm oil",,"tropical rainforest",1,0,1,1,"biodiesel","1G",,235.478,84,94,20
+"Lange M 2011",2011,"South east asia","country","palm oil",,"shifting cultivation mature fallow",1,0,0,1,"biodiesel","1G",,222.07,84,94,20
+"Lange M 2011",2011,"South east asia","country","palm oil",,"shifting cultivation shortened fallow",1,0,0,1,"biodiesel","1G",,-3.352,84,94,20
+"Lange M 2011",2011,"South east asia","country","palm oil",,"scrubland",1,1,0,1,"biodiesel","1G",,-21.788,84,94,20
+"Lange M 2011",2011,"South east asia","country","palm oil",,"degraded grassland",1,1,0,1,"biodiesel","1G",,-71.23,84,94,20
+"Lange M 2011",2011,"South east asia","country","palm oil",,"tropical rainforest",1,0,1,1,"biodiesel","1G",,213.69,84,94,20
+"Lange M 2011",2011,"South east asia","country","palm oil",,"shifting cultivation mature fallow",1,0,0,1,"biodiesel","1G",,199.444,84,94,20
+"Lange M 2011",2011,"South east asia","country","palm oil",,"shifting cultivation shortened fallow",1,0,0,1,"biodiesel","1G",,-25.978,84,94,20
+"Lange M 2011",2011,"South east asia","country","palm oil",,"scrubland",1,1,0,1,"biodiesel","1G",,-43.576,84,94,20
+"Lange M 2011",2011,"South east asia","country","palm oil",,"degraded grassland",1,1,0,1,"biodiesel","1G",,-93.018,84,94,20
+"Lange M 2011",2011,"germany","country","canola",,"scrubland",1,1,0,0,"biodiesel","1G",,121.51,84,94,20
+"Lange M 2011",2011,"germany","country","canola",,"degraded grassland",1,1,0,0,"biodiesel","1G",,33.52,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"grassland",0,1,0,0,"bioethanol","1G","no allocation",237.86,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"grassland",0,1,0,0,"bioethanol","1G","massic",103.62,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"grassland",0,1,0,0,"bioethanol","1G","energy",131.39,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"grassland",0,1,0,0,"bioethanol","1G","economic",179.12,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"grassland",0,1,0,0,"bioethanol","1G","substitution",232.88,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"low tillage cropland",0,0,0,0,"bioethanol","1G","no allocation",66.65,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"low tillage cropland",0,0,0,0,"bioethanol","1G","massic",26.43,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"low tillage cropland",0,0,0,0,"bioethanol","1G","energy",34.19,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"low tillage cropland",0,0,0,0,"bioethanol","1G","economic",47.9,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"low tillage cropland",0,0,0,0,"bioethanol","1G","substitution",61.69,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"full tillage cropland",0,0,0,0,"bioethanol","1G","no allocation",31.41,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"full tillage cropland",0,0,0,0,"bioethanol","1G","massic",11.19,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"full tillage cropland",0,0,0,0,"bioethanol","1G","energy",14.95,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"full tillage cropland",0,0,0,0,"bioethanol","1G","economic",20.71,84,94,20
+"Malça J & Freire 2012",2012,"Europe","continent","wheat",,"full tillage cropland",0,0,0,0,"bioethanol","1G","substitution",28.46,84,94,20
+"Meyer-Aurich A et al 2012",2012,"germany","country","corn and cattle slurry",,"grassland",0,1,0,0,"bioelectricity",,,230,200,500,20
+"Meyer-Aurich A et al 2012",2012,"germany","country","corn and cattle slurry",,"grassland",0,1,0,0,"bioelectricity",,,40,200,500,20
+"Mullins KA et al 2010",2010,"USA","country","corn",,,1,,,0,"bioethanol","1G","system expansion",101,84,94,30
+"Mullins KA et al 2010",2011,"USA","country","corn",,,1,,,0,"bioethanol","1G","system expansion",119,84,94,30
+"Mullins KA et al 2010",2011,"USA","country","switchgrass",,,1,,,0,"bioethanol","2G",,18,84,94,30
+"Mullins KA et al 2010",2011,"USA","country","switchgrass",,,1,,,0,"bioethanol","2G",,18,84,94,30
+"Mullins KA et al 2010",2011,"USA","country","switchgrass",,,1,,,0,"bioethanol","2G",,48,84,94,30
+"Mullins KA et al 2010",2011,"USA","country","switchgrass",,,1,,,0,"bioethanol","2G",,31,84,94,30
+"Nasterlack T et al 2014",2014,"south africa","region","biofuel sugar beat and sorgho",,"cropland",0,0,0,0,"bioethanol","1G",,65.3,84,94,20
+"Nguyen TLT et al 2012",2012,"thailand","world","molasse",,,1,,,0,"bioethanol","1G","economic",10.34,84,94,20
+"Nguyen TLT et al 2012",2012,"thailand","world","molasse",,,1,,,0,"bioethanol","1G","mass energy",11.35,84,94,20
+"Nguyen TLT et al 2012",2012,"thailand","world","molasse",,,1,,,0,"bioethanol","1G","economic",1.34,84,94,20
+"Nguyen TLT et al 2012",2012,"thailand","world","molasse",,,1,,,0,"bioethanol","1G","mass energy",2.51,84,94,20
+"Nguyen TLT et al 2012",2012,"thailand","world","molasse",,,1,,,0,"bioethanol","1G","system expansion",3.51,84,94,20
+"Nguyen TLT et al 2012",2012,"thailand","world","molasse","grassland",,1,,,0,"bioethanol","1G","system expansion",6.94,84,94,20
+"Nguyen TLT et al 2012",2012,"thailand","world","molasse","grassland",,1,,,0,"bioethanol","1G","system expansion",6.94,84,94,20
+"Nguyen TLT et al 2012",2012,"thailand","world","molasse","forest",,1,,,0,"bioethanol","1G","system expansion",41.95,84,94,20
+"Nguyen TLT et al 2012",2012,"thailand","world","molasse","forest",,1,,,0,"bioethanol","1G","system expansion",11.59,84,94,20
+"Njakou Djomo S et al 2013",2013,"Belgique","parcelle","SRXC","no iLUC","agricultural land",0,0,0,0,"bioelectricity",,,47.67,200,500,2
+"Pradhan A et al 2012",2012,"USA","country","soybean",,,1,,,0,"biodiesel","1G",,72.8,84,94,30
+"Reinhard J & Zah R 2011",2011,"switzerland","country","rapeseed",,,1,,,0,"biodiesel","1G",,62,84,94,20
+"Reinhard J & Zah R 2011",2011,"switzerland","country","rapeseed",,"set aside",1,0,0,0,"biodiesel","1G",,58,84,94,20
+"Reinhard J & Zah R 2011",2011,"switzerland","country","sunflower",,"set aside",1,0,0,0,"biodiesel","1G",,74,84,94,20
+"Reinhard J & Zah R 2011",2011,"switzerland","country","palm oil",,"rain forest grassland",1,0,0,1,"biodiesel","2G",,329,84,94,20
+"Reinhard J & Zah R 2011",2011,"switzerland","country","rape seed",,"grassland",1,1,0,0,"biodiesel","1G",,23,84,94,20
+"Reinhard J & Zah R 2011",2011,"switzerland","country","rape seed",,"grassland",1,1,0,0,"biodiesel","1G",,-175,84,94,20
+"Reinhard J & Zah R 2011",2011,"switzerland","country","rape seed",,"grassland",1,1,0,0,"biodiesel","1G",,197,84,94,20
+"Saikkonen L et al 2014",2014,"finland","country","palm oil",,"natural forest or mineral soil",1,,1,1,"biodiesel","1G",,78.63,84,94,20
+"Saikkonen L et al 2014",2014,"finland","country","palm oil",,"natural forest or peat soil",1,,1,1,"biodiesel","1G",,165.8,84,94,20
+"Saikkonen L et al 2014",2014,"finland","country","palm oil",,"mature fallow",1,0,0,1,"biodiesel","1G",,-182.15,84,94,20
+"Saikkonen L et al 2014",2014,"finland","country","palm oil",,"short fallow",1,0,0,1,"biodiesel","1G",,-278.22,84,94,20
+"Saikkonen L et al 2014",2014,"finland","country","palm oil",,"improved grassland",1,1,0,1,"biodiesel","1G",,-211.72,84,94,20
+"Searchinger T et al 2008",2008,"USA","country","corn",,,1,,,0,"bioethanol","1G",,177,84,94,30
+"Searchinger T et al 2008",2008,"USA","country","switchgrass",,,1,,,0,"bioethanol","2G",,138,84,94,30
+"Siangjaeo S et al 2011",2011,"thailand","region","palm oil",,"rubber",0,0,0,1,"biodiesel","2G",,25.16,84,94,25
+"Siangjaeo S et al 2011",2011,"thailand","region","palm oil",,"cassava",0,0,0,1,"biodiesel","2G",,22.53,84,94,25
+"Siangjaeo S et al 2011",2011,"thailand","region","palm oil",,"abanded land",0,0,0,1,"biodiesel","2G",,17.94,84,94,25
+"Silalertruksa T & Gheewala SH 2011a",2011,"thailand","country","CASSAVA",,"forest",0,0,1,0,"bioethanol","1G",,281,84,94,20
+"Silalertruksa T & Gheewala SH 2011a",2011,"thailand","country","MOLASSE",,"forest",0,0,1,0,"bioethanol","1G",,336,84,94,20
+"Silalertruksa T & Gheewala SH 2011a",2011,"thailand","country","CASSAVA",,"grassland",0,1,0,0,"bioethanol","1G",,95,84,94,20
+"Silalertruksa T & Gheewala SH 2011a",2011,"thailand","country","MOLASSE",,"grassland",0,1,0,0,"bioethanol","1G",,114.5,84,94,20
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"grassland",0,1,0,0,"bioethanol","1G",,65,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"grassland",0,1,0,0,"bioethanol","1G",,82,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"grassland",0,1,0,0,"bioethanol","1G",,86,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"forest",0,0,1,0,"bioethanol","1G",,65,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"forest",0,0,1,0,"bioethanol","1G",,14,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"forest",0,0,1,0,"bioethanol","1G",,17,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"grassland",0,1,0,0,"bioethanol","1G",,2,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"grassland",0,1,0,0,"bioethanol","1G",,35,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"grassland",0,1,0,0,"bioethanol","1G",,40,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"forest",0,0,1,0,"bioethanol","1G",,22,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"forest",0,0,1,0,"bioethanol","1G",,10,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"forest",0,0,1,0,"bioethanol","1G",,12,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"forest",0,0,1,0,"bioethanol","1G",,2,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"forest",0,0,1,0,"bioethanol","1G",,23,84,94,
+"Silalertruksa  T & Gheewala SH 2011b",2011,"thailand","country","sugarcane molasse and cassave",,"forest",0,0,1,0,"bioethanol","1G",,24,84,94,
+"Silalertruksa T & Gheewala SH  2012a",2012,"thailand","country","palm oil",,"tropical forest",0,0,1,1,"biodiesel","1G","economic",158.37,84,94,25
+"Silalertruksa T & Gheewala SH  2012a",2012,"thailand","country","palm oil",,"tropical forest",0,0,1,1,"biodiesel","1G","economic",144.35,84,94,25
+"Silalertruksa T & Gheewala SH  2012a",2012,"thailand","country","palm oil",,"tropical forest",0,0,1,1,"biodiesel","1G","economic",145.43,84,94,25
+"Silalertruksa T & Gheewala SH  2012a",2012,"thailand","country","palm oil",,"tropical forest",0,0,1,1,"biodiesel","1G","economic",142.79,84,94,25
+"Silalertruksa T & Gheewala SH  2012a",2012,"thailand","country","palm oil",,"tropical forest",0,0,1,1,"biodiesel","1G","economic",144.33,84,94,25
+"Silalertruksa T & Ghewala SH 2012 b",2012,"thailand","country","palm oil","grassland","rubber",1,0,0,1,"biodiesel","2G","system expansion",15,84,94,25
+"Silalertruksa T & Ghewala SH 2012 b",2012,"thailand","country","palm oil","forest land","rubber",1,0,0,1,"biodiesel","2G","system expansion",15,84,94,25
+"Silalertruksa T & Ghewala SH 2012 b",2012,"thailand","country","palm oil","grassland","cassava",1,0,0,1,"biodiesel","2G","system expansion",20.5,84,94,25
+"Silalertruksa T & Ghewala SH 2012 b",2012,"thailand","country","palm oil","forest land","cassava",1,0,0,1,"biodiesel","2G","system expansion",20.5,84,94,25
+"Silalertruksa T & Ghewala SH 2012 b",2012,"thailand","country","palm oil","no iLUC","paddy",0,0,0,1,"biodiesel","2G","system expansion",17.5,84,94,25
+"Silalertruksa T & Ghewala SH 2012 b",2012,"thailand","country","palm oil",,"set aside",1,0,0,1,"biodiesel","2G","system expansion",18.5,84,94,25
+"Silalertruksa T & Ghewala SH 2012 b",2012,"thailand","country","palm oil",,"forest land",1,0,1,1,"biodiesel","2G","system expansion",233,84,94,25
+"Silalertruksa T et al 2009",2009,"thailand","country","cassava","no iLUC","grassland",0,1,0,0,"bioethanol","1G",,153.67,84,94,20
+"Silalertruksa T et al 2009",2009,"thailand","country","cassava","no iLUC","no dLUC",0,0,0,0,"bioethanol","1G",,138.44,84,94,20
+"Silalertruksa T et al 2009",2009,"thailand","country","cassava","no iLUC","grassland",0,1,0,0,"bioethanol","1G",,176.46,84,94,20
+"Silalertruksa T et al 2009",2009,"thailand","country","cassava","no iLUC","no dLUC",0,0,0,0,"bioethanol","1G",,138.44,84,94,20
+"Silalertruksa T et al 2009",2009,"thailand","country","cassava","cropland","cropland",1,0,0,0,"bioethanol","1G",,114.1,84,94,20
+"Silalertruksa T et al 2009",2009,"thailand","country","cassava","grassland","cropland",1,0,0,0,"bioethanol","1G",,152.12,84,94,20
+"Smyth BM et al 2011",2011,"ireland","country","perrenial grass","UK beef","no dLUC",1,,,0,"bioethanol","2G",,16.7,84,94,50
+"Smyth BM et al 2011",2011,"ireland","country","perrenial grass","EU beef","no dLUC",1,,,0,"bioethanol","2G",,16.7,84,94,50
+"Smyth BM et al 2011",2011,"ireland","country","perrenial grass","new zeland beef","no dLUC",1,,,0,"bioethanol","2G",,15.6,84,94,50
+"Smyth BM et al 2011",2011,"ireland","country","perrenial grass","new zeland beef","no dLUC",1,,,0,"bioethanol","2G",,28.2,84,94,50
+"Smyth BM et al 2011",2011,"ireland","country","perrenial grass","brazil beef","no dLUC",1,,,0,"bioethanol","2G",,653.5,84,94,50
+"Smyth BM et al 2011",2011,"ireland","country","perrenial grass","dutch poultry","no dLUC",1,,,0,"bioethanol","2G",,-1.9,84,94,50
+"Souza SP et al  2012",2012,"Brazil","country","sugarcane",,"woody savnnah",0,1,0,0,"bioethanol","1G","energy",80.87,84,94,30
+"Souza SP et al  2012",2012,"Brazil","country","sugarcane",,"typical savannah",0,1,0,0,"bioethanol","1G","energy",63.75,84,94,30
+"Souza SP et al  2012",2012,"Brazil","country","sugarcane",,"degraded pastureland",0,1,0,0,"bioethanol","1G","energy",29.62,84,94,30
+"Souza SP et al  2012",2012,"Brazil","country","palm oil",,"woody savnnah",0,1,0,1,"biodiesel","1G","energy",-9.6,84,94,30
+"Souza SP et al  2012",2012,"Brazil","country","palm oil",,"typical savannah",0,1,0,1,"biodiesel","1G","energy",-18.2,84,94,30
+"Souza SP et al  2012",2012,"Brazil","country","palm oil",,"degraded pastureland",0,1,0,1,"biodiesel","1G","energy",-44.82,84,94,30
+"Souza SP et al  2012",2012,"Brazil","country","palm oil and sugarcane",,"woody savnnah",0,1,0,1,"biodiesel","1G","energy",33.52,84,94,30
+"Souza SP et al  2012",2012,"Brazil","country","palm oil and sugarcane",,"typical savannah",0,1,0,1,"biodiesel","1G","energy",24.92,84,94,30
+"Souza SP et al  2012",2012,"Brazil","country","palm oil and sugarcane",,"degraded pastureland",0,1,0,1,"biodiesel","1G","energy",-1.69,84,94,30
+"Spatari S & MacLean HL et al 2010",2010,"USA","country","corn stover",,"reserce program land and pasture land",0,1,0,0,"bioethanol","2G","system expansion",-51.28,84,94,30
+"Spatari S & MacLean HL et al 2010",2010,"USA","country","corn stover",,"reserce program land and pasture land",0,1,0,0,"bioethanol","2G","system expansion",-5.12,84,94,30
+"Spatari S & MacLean HL et al 2010",2010,"USA","country","switchgrass",,"reserce program land and pasture land",0,1,0,0,"bioethanol","2G","system expansion",10.25,84,94,30
+"Spatari S & MacLean HL et al 2010",2010,"USA","country","switchgrass",,"reserce program land and pasture land",0,1,0,0,"bioethanol","2G","system expansion",35.89,84,94,30
+"Spatari S & MacLean HL et al 2010",2010,"USA","country","switchgrass",,"reserce program land and pasture land",0,1,0,0,"bioethanol","2G","system expansion",-5.12,84,94,30
+"Spatari S & MacLean HL et al 2010",2010,"USA","country","switchgrass",,"reserce program land and pasture land",0,1,0,0,"bioethanol","2G","system expansion",-30.76,84,94,30
+"Styles D & Jones MB 2008",2008,"Ireland","country","miscanthus",,"grassland",0,1,0,0,"biogas",,,62,360,720,100
+"Styles D & Jones MB 2008",2008,"Ireland","country","miscanthus",,"grassland",0,1,0,0,"biogas",,,45,360,720,100
+"Tonini D et al 2012",2012,"Danmark","country","perrenial crops",,"cropland",1,0,0,0,"biogas",,,175.7,100,200,20
+"Tonini D et al 2012",2012,"Danmark","country","perrenial crops",,"cropland",1,0,0,0,"biogas",,,187.85,100,200,20
+"Tonini D et al 2012",2012,"Danmark","country","perrenial crops",,"cropland",1,0,0,0,"biogas",,,140.9,100,200,20
+"Tonini D et al 2012",2012,"Danmark","country","perrenial crops",,"cropland",1,0,0,0,"biogas",,,93.9,100,200,20
+"Tonini D et al 2012",2012,"Danmark","country","perrenial crops",,"cropland",1,0,0,0,"biogas",,,35.2,100,200,20
+"Tonini D et al 2012",2012,"Danmark","country","perrenial crops",,"cropland",1,0,0,0,"biogas",,,58.7,100,200,20
+"Tonini D et al 2012",2012,"Danmark","country","perrenial crops",,"cropland",1,0,0,0,"biogas",,,0,100,200,20
+"Tonini D et al 2012",2012,"Danmark","country","perrenial crops",,"cropland",1,0,0,0,"biogas",,,-58.7,100,200,20
+"Tonini D et al 2012",2012,"Danmark","country","perrenial crops",,"cropland",1,0,0,0,"biogas",,,70.45,100,200,20
+"Tonini D et al 2012",2012,"Danmark","country","perrenial crops",,"cropland",1,0,0,0,"biogas",,,82.1,100,200,20
+"Tonini D et al 2012",2012,"Danmark","country","perrenial crops",,"cropland",1,0,0,0,"biogas",,,23.47,100,200,20
+"Tonini D et al 2012",2012,"Danmark","country","perrenial crops",,"cropland",1,0,0,0,"biogas",,,-35.2,100,200,20
+"Uusitalo V et al 2014a",2014,"Europe","continent","biowaste",,,1,,,0,"biomethane",,"considered as waste",21.79,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","biowaste",,,1,,,0,"biomethane",,"considered as waste",14.38,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","biowaste",,,1,,,0,"biomethane",,"energy",13.93,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","biowaste",,,1,,,0,"biomethane",,"economic",13.71,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","biowaste",,,1,,,0,"biomethane",,"substitution",14.26,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","biowaste",,,1,,,0,"biomethane",,"substitution totla",11.5,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","dedicated energy crops",,,1,,,0,"biomethane",,"considered as waste",60.66,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","dedicated energy crops",,,1,,,0,"biomethane",,"considered as waste",45.11,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","dedicated energy crops",,,1,,,0,"biomethane",,"energy",41.37,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","dedicated energy crops",,,1,,,0,"biomethane",,"economic",40.13,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","dedicated energy crops",,,1,,,0,"biomethane",,"substitution",45.11,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","dedicated energy crops",,,1,,,0,"biomethane",,"substitution totla",39.51,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","dedicated energy crops",,"forest",1,0,1,0,"biomethane",,"considered as waste",141.66,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","dedicated energy crops",,"forest",1,0,1,0,"biomethane",,"considered as waste",126.11,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","dedicated energy crops",,"forest",1,0,1,0,"biomethane",,"energy",122.35,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","dedicated energy crops",,"forest",1,0,1,0,"biomethane",,"economic",121.13,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","dedicated energy crops",,"forest",1,0,1,0,"biomethane",,"substitution",126.11,100,200,119
+"Uusitalo V et al 2014a",2014,"Europe","continent","dedicated energy crops",,"forest",1,0,1,0,"biomethane",,"substitution total",120.51,100,200,119
+"Uusitalo V et al 2014b",2014,,"world","palm oil",,"grassland",0,1,0,1,"biodiesel","2G","system expansion",-17.39,84,94,20
+"Uusitalo V et al 2014b",2014,,"world","palm oil",,"grassland",0,1,0,1,"biodiesel","2G","energy",-14.61,84,94,20
+"Uusitalo V et al 2014b",2014,,"world","palm oil",,"mineral soil",0,0,0,1,"biodiesel","2G","system expansion",256.52,84,94,20
+"Uusitalo V et al 2014b",2014,,"world","palm oil",,"mineral soil",0,0,0,1,"biodiesel","2G","energy",230.84,84,94,20
+"Uusitalo V et al 2014b",2014,,"world","palm oil",,"foresl",0,0,1,1,"biodiesel","2G","system expansion",426.68,84,94,20
+"Uusitalo V et al 2014b",2014,,"world","palm oil",,"foresl",0,0,1,1,"biodiesel","2G","energy",388.63,84,94,20
+"Uusitalo V et al 2014b",2014,,"world","rapeseed",,"grassland",0,1,0,0,"biodiesel","1G","system expansion",73.91,84,94,20
+"Uusitalo V et al 2014b",2014,,"world","rapeseed oil",,"grassland",0,1,0,0,"biodiesel","1G","energy",70.12,84,94,20
+"Uusitalo V et al 2014b",2014,,"world","rapeseed oil",,"temerate forest",0,0,1,0,"biodiesel","1G","system expansion",460.86,84,94,20
+"Uusitalo V et al 2014b",2014,,"world","rapeseed oil",,"temerate forest",0,0,1,0,"biodiesel","1G","energy",420.77,84,94,20
+"Uusitalo V et al 2014b",2014,,"world","jatropha oil",,"grassland",0,1,0,0,"biodiesel","2G","system expansion",13.04,84,94,20
+"Uusitalo V et al 2014b",2014,,"world","jatropha oil",,"grassland",0,1,0,0,"biodiesel","2G","energy",11.68,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"cropland",1,0,0,0,"bioelectricity",,,95.65,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"cropland",1,0,0,0,"bioelectricity",,,100,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"cropland",1,0,0,0,"bioelectricity",,,78.26,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"cropland",1,0,0,0,"bioelectricity",,,98.26,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"cropland",1,0,0,0,"bioelectricity",,,91.3,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"cropland",1,0,0,0,"bioelectricity",,,91.3,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"degraded grassland",1,1,0,0,"bioelectricity",,,69.56,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"degraded grassland",1,1,0,0,"bioelectricity",,,73.91,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"cropland",1,0,0,0,"bioelectricity",,,130.43,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"cropland",1,0,0,0,"bioelectricity",,,130.43,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"degraded grassland",1,1,0,0,"bioelectricity",,,104.34,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"degraded grassland",1,1,0,0,"bioelectricity",,,104.34,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"cropland",1,0,0,0,"bioelectricity",,,121.73,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"cropland",1,0,0,0,"bioelectricity",,,121.73,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"degraded grassland",1,1,0,0,"bioelectricity",,,100,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","switchgrass",,"degraded grassland",1,1,0,0,"bioelectricity",,,100,720,1800,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",8.24,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",54.55,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",9.94,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",54.55,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",50,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",91.76,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","1G","energy",9.09,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","1G","energy",25.85,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",7.39,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",223.3,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","1G","energy",9.09,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","1G","energy",52.84,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",49.15,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",90.06,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","1G","energy",8.24,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","2G","energy",24.15,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",7.39,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",224.15,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","1G","energy",9.94,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degradeed grass land",1,1,0,0,"biodiesel","1G","energy",53.69,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",50,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",90.91,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","1G","energy",9.09,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","1G","energy",25,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",7.39,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",52.84,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","1G","energy",9.09,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","1G","energy",52.84,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",49.15,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"cropland",1,0,0,0,"biodiesel","1G","energy",90.06,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","1G","energy",9.09,84,94,20
+"van Dam J et al 2009",2009,"argentina","region","soybean",,"degraded grassland",1,1,0,0,"biodiesel","2G","energy",52.84,84,94,20
+"van der Hilst F et al 2014",2014,"UKRAINE","country","Wheat",,,0,,,0,"bioethanol","1G",,10.7,84,94,20
+"van der Hilst F et al 2014",2014,"UKRAINE","country","switchgrass",,,0,,,0,"bioethanol","2G",,-7.7,84,94,20
+"van der Hilst F et al 2014",2014,"UKRAINE","country","Wheat",,,0,,,0,"bioethanol","1G",,10.7,84,94,20
+"van der Hilst F et al 2014",2014,"UKRAINE","country","switchgrass",,,0,,,0,"bioethanol","2G",,40.2,84,94,20
+"Wang M et al 2012",2012,"USA","country","corn",,,1,,,0,"bioethanol","1G","displacement",62,84,94,30
+"Wang M et al 2012",2012,"USA","country","switchgrass",,,1,,,0,"bioethanol","2G","displacement",12,84,94,30
+"Wang M et al 2012",2012,"USA","country","miscanthus",,,1,,,0,"bioethanol","2G","displacement",5,84,94,30
+"Wang M et al 2012",2012,"USA","country","corn stover",,,1,,,0,"bioethanol","2G","displacement",6,84,94,30
+"Wang M et al 2012",2012,"USA","country","sugarcane",,,1,,,0,"bioethanol","1G","energy",45,84,94,30
+"Wang MQ et al 2011",2011,"USA","country","corn",,,1,,,0,"bioethanol","1G","mass",70,84,94,30
+"Wang MQ et al 2011",2011,"USA","country","corn stover forest residues   miscanthus",,,1,,,0,"bioethanol","2G","mass",5,84,94,30
+"Wicke B et al 2008",2008,"malaysia","region","palm oil",,"forest cover",0,0,1,1,"biodiesel","1G","system expansion",391,84,94,25
+"Wicke B et al 2008",2008,"malaysia","region","palm oil",,"natural rain forest",0,0,1,1,"biodiesel","1G","system expansion",107,84,94,25
+"Wicke B et al 2008",2008,"malaysia","region","palm oil",,"grassland",0,1,0,1,"biodiesel","1G","system expansion",32,84,94,25
+"Wicke B et al 2008",2008,"malaysia","region","palm oil",,"logged ovr rain forest",0,0,1,1,"biodiesel","1G","system expansion",-51,84,94,25
+"Wicke B et al 2008",2008,"malaysia","region","palm oil",,"grassland",0,1,0,1,"biodiesel","1G","system expansion",-53,84,94,25
+"Wicke B et al 2008",2008,"malaysia","region","palm oil",,"forest cover",0,0,1,1,"bioelectricity",,"system expansion",407,200,500,25
+"Wicke B et al 2008",2008,"malaysia","region","palm oil",,"natural rain forest",0,0,1,1,"bioelectricity",,"system expansion",123,200,500,25
+"Wicke B et al 2008",2008,"malaysia","region","palm oil",,"grassland",0,1,0,1,"bioelectricity",,"system expansion",48,200,500,25
+"Wicke B et al 2008",2008,"malaysia","region","palm oil",,"logged ovr rain forest",0,0,1,1,"bioelectricity",,"system expansion",-35,200,500,25
+"Wicke B et al 2008",2008,"malaysia","region","palm oil",,"grassland",0,1,0,1,"bioelectricity",,"system expansion",-37,200,500,25
+"Yu Y & Wu H 2010",2010,"Australia","country","mallee",,"cropland",0,0,0,0,"bioethanol","2G",,-13.7,84,94,
+"Yu Y & Wu H 2010",2010,"Australia","country","mallee",,"cropland",0,0,0,0,"bioethanol","2G",,-15.7,84,94,
