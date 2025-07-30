@@ -19,8 +19,8 @@
 
   # set working directory
   setwd('C:/stabilisation-wedges-2025/')
-  
-  
+
+
   
 ###### LOAD PACKAGES AND SOURCE FILES ######
   
@@ -31,32 +31,34 @@
 ###### LOAD INPUT DATA ######
   
   # load passenger transport data from scenarios
-  psg_tran <- readRDS("Fig 3/Inputs/passenger_transport.rds")
+  psg_tran <- read.csv("effort_calc/inputs/passenger_transport.csv")
   
   # load freight transport data from scenarios
-  freight <- readRDS("Fig 3/Inputs/freight_transport.rds")
+  freight <- read.csv("effort_calc/inputs/freight_transport.csv")
 
   # load carbon intensity of electricity [GtCO2e/TWh]
-  CI_elec <- read.csv("Fig 3/Inputs/grid_carbon_intensity.csv", check.names = FALSE, row.names = 1) %>%
+  CI_elec <- read.csv("effort_calc/inputs/grid_carbon_intensity.csv", check.names = FALSE, row.names = 1) %>%
              pivot_longer(c(2:10), names_to = "year")
+  CI_elec$year = as.numeric(CI_elec$year)
   
   # scenario data on hydrogen production
-  h2_prod <- readRDS("Fig 3/Inputs/hydrogen_production.rds")
+  h2_prod <- read.csv("effort_calc/inputs/hydrogen_production.csv")
   
-  # combustion emissions factors [GtCO2e/Twh]
-  ef <- readRDS("Fig 3/Inputs/emission_factors.rds")
+  # CO2 equivalent emission factors for coal (solid), oil (liquid) and natural gas (gas) [GtCO2e/TWh]
+  ef_tot <- read.csv("effort_calc/inputs/emission_factors.csv")
+  ef <- ef_tot[1:3]
+
+  # calculate overheads from IPCC [AR5 applied to combustion emissions factors [%] → [GtCO2e/TWh]
+  ef_oh <- ef * ef_tot[4:6]
   
-  # overhead for combustion emissions factors [GtCO2e/Twh]
-  ef_oh <- ef * c(0.075, 0.20, 0.25)
-  
-  # total emissions factors including overhead [GtCO2e/Twh]
+  # combustion emissions plus overheads 
   ef_tot <- ef + ef_oh
   
   # CO2e multiplier for aviation emissions from Lee et al.
   avi_mult <- 1.7
   
   # life cycle emissions from ethanol production [g/MJ]
-  biofuels_emis <- readRDS("Fig 3/Inputs/ethanol_emissions.rds")
+  biofuels_emis <- read.csv("effort_calc/inputs/ethanol_emissions.csv")
   
   # number of simulations for monte_carlo 
   N <- 10000
@@ -261,7 +263,7 @@
                         mutate(baseline = to_l100km(baseline),
                                target = to_l100km(target))
 
-  cat('Improve efficiency of cars:', range(wedge_v_eff$target), 'litres per 100km acheives a wedge\n')
+  cat('Improve efficiency of cars:', mean(wedge_v_eff$target), 'litres per 100km acheives a wedge\n')
 
 
   ### avoided travel [pkm]
@@ -270,7 +272,7 @@
                  mutate(target = w_target / CO2.pkm) %>%
                  select(scenario, target)
 
-  cat('Avoid car travel or walk/cycle:', range(wedge_avoid$target) / 1e12, 'trillion pkm acheives a wedge\n')
+  cat('Avoid car travel or walk/cycle:', mean(wedge_avoid$target) / 1e12, 'trillion pkm acheives a wedge\n')
 
 
   ### electric vehicles [pkm]
@@ -282,7 +284,7 @@
                select(scenario, target) %>%
                filter(scenario != "iea2")
 
-  cat('Deploy more electric vehicles:', range(wedge_EVs$target) / 1e12, 'trillion pkm acheives a wedge\n')
+  cat('Deploy more electric vehicles:', mean(wedge_EVs$target) / 1e12, 'trillion pkm acheives a wedge\n')
 
 
   ### public transport [pkm]
@@ -295,7 +297,7 @@
                   select(scenario, target) %>%
                   filter(scenario != "iea2")
 
-  cat('Use more public transport:', range(wedge_public$target) / 1e12, 'trillion pkm acheives a wedge\n')
+  cat('Use more public transport:', mean(wedge_public$target) / 1e12, 'trillion pkm acheives a wedge\n')
 
 
   ### reduced air travel [pkm]
@@ -306,7 +308,7 @@
                mutate(target = w_target / CO2.pkm) %>%
                select(scenario, target)
 
-  cat('Avoid taking flights:', range(wedge_air$target) / 1e12, 'trillion pkm acheives a wedge\n')
+  cat('Avoid taking flights:', mean(wedge_air$target) / 1e12, 'trillion pkm acheives a wedge\n')
 
 
   ### biofuels [pkm]
@@ -320,7 +322,7 @@
                       target = bio_energy / pkm.TWh) %>%
                select(scenario, target)
 
-  cat('Deploy more biofuels:', range(wedge_bio$target) / 1e12, 'trillion pkm acheives a wedge\n')
+  cat('Deploy more biofuels:', mean(wedge_bio$target) / 1e12, 'trillion pkm acheives a wedge\n')
 
 
   ### freight [% of 2050 freight emissions]
@@ -328,4 +330,4 @@
                    summarise(target = w_target / emi) %>%
                    select(scenario, target)
 
-  cat('Decarbonise surface freight:', range(wedge_freight$target) * 100, '% reduction in 2050 freight emissions achieves a wedge\n')
+  cat('Decarbonise surface freight:', mean(wedge_freight$target) * 100, '% reduction in 2050 freight emissions achieves a wedge\n')

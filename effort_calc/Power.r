@@ -18,7 +18,7 @@
 
   # set working directory
   setwd('C:/stabilisation-wedges-2025/')
-  
+ 
   
   
 ###### LOAD PACKAGES AND SOURCE FILES ######
@@ -29,38 +29,50 @@
   
 ###### PREPARE INPUT DATA ######
 
-  # scenario data on electricity output and fuel input to power stations [TWh]
-  elec <- readRDS("Fig 3/Inputs/electricity_output.rds")
-  fuel <- readRDS("Fig 3/Inputs/fuel_input.rds")
-  
-  # combustion emissions factors for coal (solid), oil (liquid) and gas [GtCO2e/TWh]
-  ef <- readRDS("Fig 3/Inputs/emission_factors.rds")
+  # define the global carbon calculator's years (they are used in lots of our data inputs)
+  gcc_years <- c(2011, 2015, 2020, 2025, 2030, 2035, 2040, 2045, 2050)
 
-  # emissions overheads for fuel production from IPCC [%]
-  ef_oh <- ef * c(0.075, 0.20, 0.25)
+  # scenario data on electricity output and fuel input to power stations [TWh]
+  elec <- read.csv("effort_calc/inputs/electricity_output.csv")
+  fuel <- read.csv("effort_calc/inputs/fuel_input.csv")
+
+  # fix column names, and split into a list based on baseline scenario
+  colnames(elec) <- colnames(fuel) <- c('plant', 'variable', 'baseline', gcc_years)
+  elec <- split(elec, elec$baseline)
+  fuel <- split(fuel, fuel$baseline)
+  names(elec) = paste0(names(elec), '.elec')
+  names(fuel) = paste0(names(fuel), '.fuel')
   
-  # combustion emissions plus overheads [GtCO2e/TWh]
-  ef_tot <- ef + ef_oh 
+  # CO2 equivalent emission factors for coal (solid), oil (liquid) and natural gas (gas) [GtCO2e/TWh]
+  ef_tot <- read.csv("effort_calc/inputs/emission_factors.csv")
+  ef <- ef_tot[1:3]
+
+  # calculate overheads from IPCC [AR5 applied to combustion emissions factors [%] → [GtCO2e/TWh]
+  ef_oh <- ef * ef_tot[4:6]
+  
+  # combustion emissions plus overheads 
+  ef_tot <- ef + ef_oh
   
   # bioenergy emissions credits allocated to power sector [GtCO2e/year]
-  bio_credit <- readRDS("Fig 3/Inputs/bio_credit.rds")
+  bio_credit <- read.csv("effort_calc/inputs/bio_credit.csv")
+  colnames(bio_credit) <- gcc_years
   
   # assumed capture rate of CCS plants [%]
   c_rate <- 0.90
   
   # assumed efficiency penalties for post-combustion capture [%]
   # midpoint of the ranges from House et al. and Budinis et al.
-  coal_pen <- mean( c(0.08 + 0.155) )
-  gas_pen  <- mean( c(0.06 + 0.115) )
+  coal_pen <- mean( c(0.08, 0.155) )
+  gas_pen  <- mean( c(0.06, 0.115) )
   
   # BECCS supply chain emissions with LUC [kgCO2e/tdm]
-  ef_BECCS <- readRDS("Fig 3/Inputs/BECCS_emissions_factors.rds")
+  ef_BECCS <- read.csv("effort_calc/inputs/BECCS_emissions_factors.csv")
   
   # efficiency of BECCS plant [% HHV]
   # 100% cofiring and 90% capture from Bui et al.
   BECCS_eff <- 0.38
   
-  # average carbon content of biomass [% dm]
+  # average carbon content of biomass as CO2e [% dm]
   # average value from Fajardy et al.
   bio_C <- 0.475 * 3.67 
   
@@ -107,7 +119,7 @@
       }
     }
     m <- cbind(fuel$iea2.fuel$plant, m)
-    colnames(m) <- c("plant", 2011, 2015, 2020, 2025, 2030, 2035, 2040, 2045, 2050)
+    colnames(m) <- c("plant", gcc_years)
     m
   }
   
@@ -133,7 +145,7 @@
   
   # apply get_emissions() to give emissions per plant [GtCO2e]
   emissions <- lapply(fuel, `[`, 4:12) %>%
-              lapply(get_emissions)
+               lapply(get_emissions)
   
   # sum emissions per fuel and subtract bioenergy emissions savings to give total power sector emissions [GtCO2e]
   sum_emissions <- do.call(rbind, lapply(lapply(emissions, `[`, 2:10),colSums)) - bio_credit
@@ -143,10 +155,10 @@
   
   # calculate carbon intensity of the grid [GtCO2e/TWh]
   grid_CI <- as.data.frame(sum_emissions / sum_elec) %>% # * 1e6 # for g per kWh
-            rownames_to_column(var = "scenario")
+             rownames_to_column(var = "scenario")
   
-  # save data for grid CI with overheads
-  write.csv(grid_CI, 'Fig 3/Inputs/grid_carbon_intensity.csv')
+  # save data for grid CI with overheads for use in other scripts
+  #################################################################write.csv(grid_CI, 'effort_calc/inputs/grid_carbon_intensity.csv')
   
   
   ###### CALCULATE EMISSIONS INTENSITY AND EFFICIENCY OF EACH TYPE OF FOSSIL PLANT ######
@@ -191,8 +203,8 @@
   CCS_eff <- f_df %>%
                   filter(fuel %in% c("gas", "solid"), type %in% c("CC", "ultra")) %>%
                   mutate(eff_CCS = ifelse(fuel == "gas", eff - gas_pen, eff - coal_pen),
-                        CI_CCS = ifelse(fuel == "gas", 1 / eff_CCS * ef$gas * (1 - c_rate) + (1 / eff_CCS) * ef_oh$gas,
-                                        1 / eff_CCS * ef$solid * (1 - c_rate) + (1 / eff_CCS) * ef_oh$solid)) %>%
+                         CI_CCS = ifelse(fuel == "gas", 1 / eff_CCS * ef$gas * (1 - c_rate) + (1 / eff_CCS) * ef_oh$gas,
+                                         1 / eff_CCS * ef$solid * (1 - c_rate) + (1 / eff_CCS) * ef_oh$solid)) %>%
                   ungroup() %>%
                   select(scenario, year, fuel, eff, CI, eff_CCS, CI_CCS)
   
@@ -224,7 +236,7 @@
                mutate(target = w_target / CI) %>%
                select(-year, -CI)
 
-  cat('Install more wind/solar/nuclear:', range(wedge_res$target), 'TWh annual generation acheives a wedge\n')
+  cat('Install more wind/solar/nuclear:', mean(wedge_res$target), 'TWh annual generation acheives a wedge\n')
 
 
   ### coal to gas switching - assuming that CCGT displaces average coal 
@@ -233,26 +245,26 @@
                filter(f_df, year == "2050" & type == "CC" & scenario != "iea2") %>% select("CI_gas" = CI)) %>%
                mutate(target = w_target / (CI_coal - CI_gas)) %>% select(scenario, target)
 
-  cat('Switch from coal to gas plants:', range(wedge_c2g$target), 'TWh annual generation acheives a wedge\n')
+  cat('Switch from coal to gas plants:', mean(wedge_c2g$target), 'TWh annual generation acheives a wedge\n')
 
 
   ### CCS retrofitting
-  # assuming CCS is retrofit to CCGTs
+  # assuming CCS is retrofit at average coal plants
   wedge_CCS_coal <- filter(CCS_av, year == "2050", fuel == "solid", scenario != "iea2") %>%
                     mutate(CI_diff = CI - CI_CCS,
                            target = w_target / CI_diff) %>%
                     select(scenario, target)
 
-  cat('Retrofit coal plants with CCS:', range(wedge_CCS_coal$target), 'TWh annual generation acheives a wedge\n')
+  cat('Retrofit coal plants with CCS:', mean(wedge_CCS_coal$target), 'TWh annual generation acheives a wedge\n')
 
 
-  # assuming CCS is retrofit at average coal plants
+  # assuming CCS is retrofit to CCGTs
   wedge_CCS_gas <- filter(CCS_eff, year == "2050", fuel == "gas", scenario != "iea2") %>%
                    mutate(CI_diff = CI - CI_CCS,
                           target = w_target / CI_diff) %>%
                    select(scenario, target) 
 
-  cat('Retrofit gas plants with CCS:', range(wedge_CCS_gas$target), 'TWh annual generation acheives a wedge\n')
+  cat('Retrofit gas plants with CCS:', mean(wedge_CCS_gas$target), 'TWh annual generation acheives a wedge\n')
 
 
   ### BECCS - assume that average fossil power generation is displaced
@@ -261,8 +273,8 @@
                         target_straw = w_target / (CI - BECCS_CI$CI[2])) %>%
                  select(-CI, -year)
 
-  cat('Power BECCS with crops:', range(wedge_BECCS$target_grass), 'TWh annual generation acheives a wedge\n')
-  cat('Power BECCS with waste:', range(wedge_BECCS$target_straw), 'TWh annual generation acheives a wedge\n')
+  cat('Power BECCS with crops:', mean(wedge_BECCS$target_grass), 'TWh annual generation acheives a wedge\n')
+  cat('Power BECCS with waste:', mean(wedge_BECCS$target_straw), 'TWh annual generation acheives a wedge\n')
 
 
   ### DAC - assuming electricity input from IEA2DS scenarios
@@ -272,4 +284,4 @@
   # electricity required for a wedge
   wedge_DAC <- w_target / DAC_CE * (DAC_h / COP + DAC_e)
 
-  cat('Deploy direct air capture:', range(wedge_DAC), 'TWh annual consumption acheives a wedge\n')
+  cat('Deploy direct air capture:', mean(wedge_DAC), 'TWh annual consumption acheives a wedge\n')

@@ -23,23 +23,24 @@
   library(tidyverse)
 
   # load scenario data from the Global Calculator
-  build <- readRDS("Fig 3/Inputs/buildings_data.rds")
+  build <- read.csv("effort_calc/inputs/buildings_data.csv")
   
   # load cooling data from IEA Future of cooling (this is replicated for each scenario)
-  foc <- readRDS("Fig 3/Inputs/future_of_cooling.rds")
+  foc <- read.csv("effort_calc/inputs/future_of_cooling.csv")
   
   # load carbon intensity of electricity [GtCO2e/TWh] - make scenario names upper case
-  CI_elec <- read.csv("Fig 3/Inputs/grid_carbon_intensity.csv" , check.names = FALSE, row.names = 1) %>%
+  CI_elec <- read.csv("effort_calc/inputs/grid_carbon_intensity.csv" , check.names = FALSE, row.names = 1) %>%
              mutate(scenario = toupper(scenario))
-  
-  # CO2 equivalent emission factors [GtCO2e/TWh]
-  ef <- readRDS("Fig 3/Inputs/emission_factors.RDS")
-  
-  # overheads from fuel production from IPCC [AR5 applied to combustion emissions factors [%]
-  ef_oh <- ef * c(.075, .20, .25)
+
+  # CO2 equivalent emission factors for coal (solid), oil (liquid) and natural gas (gas) [GtCO2e/TWh]
+  ef_tot <- read.csv("effort_calc/inputs/emission_factors.csv")
+  ef <- ef_tot[1:3]
+
+  # calculate overheads from IPCC [AR5 applied to combustion emissions factors [%] → [GtCO2e/TWh]
+  ef_oh <- ef * ef_tot[4:6]
   
   # combustion emissions plus overheads 
-  ef_tot <- ef + ef_oh 
+  ef_tot <- ef + ef_oh
   
   # district heating emissions factor in GtCO2e per TWh from IEA
   ef_dh <- 225 / 1e6 # full range is 150-300  
@@ -51,7 +52,7 @@
   HHV_wood <- 15
   
   # emissions factors for stove-fuel combinations [g CO2e/kg of wood] from Greishop et al.
-  ef_stoves <- readRDS("Fig 3/Inputs/stove_emissions.rds")
+  ef_stoves <- read.csv("effort_calc/inputs/stove_emissions.csv")
   
   # efficiency of stoves [%]
   eff_stoves <- data.frame(wood_trad = 0.20, wood_fan = 0.4, wood_fan_eff = 0.5)
@@ -300,7 +301,7 @@
   wedge_fabric <- heat_cool %>% mutate(improvement = w_target / emissions,
                                        target = u_val * (1 - improvement))
   
-  cat('Reduce building heat transfer:', range(wedge_fabric$target), 'W/m2/*C heat transfer coefficient acheives a wedge\n')
+  cat('Reduce building heat transfer:', mean(wedge_fabric$target), 'W/m2/*C heat transfer coefficient acheives a wedge\n')
 
 
   # calculate the amount of 'conventional' heating that must be displaced with heat pumps in 2050 to achieve a wedge
@@ -310,7 +311,7 @@
     select(scenario, target_ued, target_fed) %>%
     filter(scenario != "IEA2")
 
-  cat('Install more heat pumps:', range(wedge_hp$target_ued), 'TWh useful energy demand met by heat pumps acheives a wedge\n')
+  cat('Install more heat pumps:', mean(wedge_hp$target_ued), 'TWh useful energy demand met by heat pumps acheives a wedge\n')
 
 
   # calculate how many stoves need to be displaced immediately to achieve a wedge
@@ -320,4 +321,4 @@
             select(scenario, emissions_diff) %>%
             mutate(target = w_target * 1e9 / 2 / emissions_diff)
 
-  cat('Deploy more clean stoves:', range(wedge_stoves$target), 'traditional stoves must be diplaced immediately to achieve a wedge\n')
+  cat('Deploy more clean stoves:', mean(wedge_stoves$target) / 1e6, 'million traditional stoves must be diplaced immediately to achieve a wedge\n')

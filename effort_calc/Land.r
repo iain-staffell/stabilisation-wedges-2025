@@ -14,21 +14,21 @@
 ##    wedge_temp_incrop
 ##    wedge_trop_silvo
 ##    wedge_temp_silvo
-##    h_wedge_rewet
-##    h_wedge_drain
+##    halfwedge_rewet
+##    halfwedge_drain
 ##
 ##
 
   # set working directory
   setwd('C:/stabilisation-wedges-2025/')
-  
+
 
   
 ###### LOAD PACKAGES AND SOURCE FILES ######
   
   library(dplyr)
   
-  source('blam_library.r')
+  source('./others/blam_library.r')
   
   
 ###### BESPOKE FUNCTIONS ###### 
@@ -66,16 +66,22 @@
   
 
 ###### REFORESTATION  ######
-  
-  # temperate [Mha]
-  # use monte_carlo to generate simulate the average carbon accumulation rate
-  temp_flux <- monte_carlo(N, 1.8, 1.8 * 0.68, 1.8 * 1.32) * 3.67 / 1000 # GtCO2 per Mha - mean and 95% CI from Griscom et al., adapted according to Cook-Patton et al.
-  wedge_temp <- sum_stat(w_target / temp_flux)
-  
-  cat('Reforest the temperate zone: Reforesting', wedge_temp$median , 'Mha by 2050 acheives a wedge\n')
+    
+    # temperate [Mha]
+    # use monte_carlo to generate simulate the average carbon accumulation rate
+    temp_reforest_flux <- monte_carlo(N, 1.8, 1.8 * 0.68, 1.8 * 1.32) * 3.67 / 1000 # GtCO2 per Mha - mean and 95% CI from Griscom et al., adapted according to Cook-Patton et al.
+    temp_plantations_flux <- monte_carlo(N, 5.8, 5.8 * 0.68, 5.8 * 1.32) * 3.67 / 1000 # GtCO2 per Mha - mean and 95% CI from Griscom et al.
+    temp_flux <- (temp_reforest_flux + temp_plantations_flux) / 2 # assuming 50% plantations
+    
+    wedge_temp <- sum_stat(w_target / temp_flux)
+    
+    cat('Reforest the temperate zone: Reforesting', wedge_temp$median , 'Mha by 2050 acheives a wedge\n')
 
   # tropical [Mha]
-  trop_flux <- monte_carlo(N, 4.3, 4.3 * 0.68, 4.3 * 1.32) * 3.67 / 1000 # GtCO2 per Mha - mean and 95% CI from Griscom et al., adapted according to Cook-Patton et al.
+  trop_reforest_flux <- monte_carlo(N, 4.3, 4.3 * 0.68, 4.3 * 1.32) * 3.67 / 1000 # GtCO2 per Mha - mean and 95% CI from Griscom et al., adapted according to Cook-Patton et al.
+  trop_plantations_flux <- monte_carlo(N, 6.2, 6.2 * 0.68, 6.2 * 1.32) * 3.67 / 1000 # GtCO2 per Mha - mean and 95% CI from Griscom et al.
+  trop_flux <- (trop_reforest_flux + trop_plantations_flux) /2 # assuming 50% plantations
+  
   wedge_trop <- sum_stat(w_target / trop_flux)
   
   cat('Reforest the tropics: Reforesting', wedge_trop$median , 'Mha by 2050 acheives a wedge\n')
@@ -123,11 +129,13 @@
   ef_committed <- ef_drained * 30
   
   # half-wedge of re-wetting [Mha]
-  h_wedge_rewet <- sum_stat((w_target / 2) / (ef_drained - ef_rewet)) # in Mha
+  halfwedge_rewet <- sum_stat((w_target / 2) / (ef_drained - ef_rewet)) # in Mha
   
-  cat('Rewet drained peatlands: Rewetting', h_wedge_rewet$median , 'Mha of drained peatlands by 2050 acheives a half-wedge\n')
+  cat('Rewet drained peatlands: Rewetting', halfwedge_rewet$median , 'Mha of drained peatlands by 2050 acheives a half-wedge\n')
   
   # half-wedge of prevented drainage [Mha/year]
-  h_wedge_drain <- sum_stat((w_target / 2) / ef_committed) # in Mha of avoided drainage
+  halfwedge_drain <- sum_stat((w_target / 2) / ef_committed) # in Mha of avoided drainage
   
-  cat('Phase-out peatland drainage: Reducing peatland drainage by', h_wedge_drain$median , 'Mha per year by 2050 acheives a half-wedge\n')
+  cat('Phase-out peatland drainage: Reducing peatland drainage by', halfwedge_drain$median , 'Mha per year by 2050 acheives a half-wedge\n')
+
+  
